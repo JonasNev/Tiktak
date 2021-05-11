@@ -10,14 +10,14 @@ function markX(element){
         opponentMove();
     }
     else {
-        // Do nothing
+        // Nieko nedarys
     }
 }
 
 function opponentMove(){
-    //computer opponent makes a move
+    //Oponento judesys
 
-    //Get all possibleMoves
+    //Gauti visus galimus veiksmus
     let elements = Array.from(document.querySelectorAll(".cell"));
     elements = elements.filter(function(el){
         return el.innerText == ""
@@ -29,8 +29,8 @@ function opponentMove(){
 
     selectedElement.innerText = "O";
 
-    //Pick random element from possible moves
-    //Mark that element as O
+    //Issirinkti viena is galimu variantu
+    //PAzymeti elementa, kaip 0
 }
 
 function randomInteger(min, max) {
@@ -38,11 +38,11 @@ function randomInteger(min, max) {
   }
 
 function getRandomMove(){
-    // analyses boards and calculates the next move
+    // Analizuoja ir nuskaito koki judesi padaryt
 }
 
 function whoWon(){
-    //analyses the lines and calculates the winner
+    //Isanalizuoja lenta ir nusprendzia kas laimejo, jeigu laimejo. 
 }
 
 function isGameFinished(){
