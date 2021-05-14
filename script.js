@@ -10,7 +10,6 @@ function resetGame() {
     var gameStatusElement = document.querySelector(".game--status");
     gameStatusElement.innerText = ``;
     }
-
     //Game status should be empty
 
 
@@ -37,25 +36,18 @@ function opponentMove() {
     // Get all elements with class name
     var cells = Array.from(document.getElementsByClassName("cell"));
     // Filter the elements by just selecting empty ones.
-
     cells = cells.filter(cell => cell.innerText == "");
-
     // Get random number
     let randomNumber = getRandomNumber(0, cells.length);
-
     // Select random element 
-
     let randomCell = cells[randomNumber];
-
     //and modify its innertext to O
-
     randomCell.innerText = '0'
 }
 
 
-function getRandomNumber(min, max) {
-    const r = Math.random() * (max - min) + min
-    return Math.floor(r)
+function getRandomNumber(max) {
+    return Math.floor(Math.random() * (max))
 }
 
 function isGameFinished() {
@@ -64,13 +56,10 @@ function isGameFinished() {
 
 function noMovesLeft() {
     var cells = Array.from(document.getElementsByClassName("cell"));
-
     cells = cells.filter(cell => cell.innerText == "");
-
     if (cells.length == 0) {
         //modify .game--status to be draw
         var gameStatusElement = document.querySelector(".game--status");
-
         gameStatusElement.innerText = "DRAW";
         return true; //the game is finished
     }
